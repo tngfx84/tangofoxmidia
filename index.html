@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tango Fox Mídia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <img src="img/logo-horizontal.png" alt="Tango Fox Mídia" class="logo">
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="em-construcao.html">Sobre</a></li>
+                        <li><a href="em-construcao.html">Serviços</a></li>
+                        <li><a href="em-construcao.html">Portfólio</a></li>
+                        <li><a href="em-construcao.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar...">
+                    <button><img src="img/lupa.png" alt="Buscar"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Principal com GIF -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>CONECTANDO MARCAS, DADOS E CRIATIVIDADE</h1>
+                <p>Mais que design, conexões estratégicas.</p>
+            </div>
+            <div class="hero-image">
+                <img src="img/animacao.gif" alt="Animação Criativa">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Captura de E-mails (Flutuante) -->
+    <section class="newsletter">
+        <div class="newsletter-box">
+            <p class="subtitulo">Faça parte da nossa comunidade e fique por dentro das novidades!</p>
+            <h2>Entre para nossa lista e receba conteúdos exclusivos e com prioridade</h2>
+
+            <form id="formulario-newsletter" action="https://tangofoxmidia.us10.list-manage.com/subscribe/post?u=46bad2f81fa28a9243094b606&amp;id=f4fd9d6a0d&amp;f_id=003afde1f0" method="POST" target="hidden_iframe">
+                <div class="input-group">
+                    <input type="email" id="email" name="EMAIL" placeholder="📧 Digite seu melhor e-mail" required>
+                    <button type="submit">Cadastrar e-mail</button>
+                </div>
+            </form>
+
+            <!-- Pop-up de Confirmação -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="fecharPopup()">&times;</span>
+                    <h2>🎉 Obrigado por se inscrever!</h2>
+                    <p>Você receberá conteúdos exclusivos em breve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="sobre">
+        <div class="container">
+            <div class="sobre-imagem">
+                <img src="img/sobre.jpg" alt="Equipe trabalhando">
+            </div>
+            <div class="sobre-texto">
+                <h2>Transformamos ideias em estratégia digital</h2>
+                <p>A <strong>Tango Fox Mídia</strong> nasceu com um propósito: unir criatividade, tecnologia e estratégia para gerar impacto digital. 
+                   Atuamos com Design, Marketing Digital, Fotografia e Data Science para criar soluções inteligentes para empresas e marcas.</p>
+                <a href="https://wa.me/5511958655696" class="botao" target="_blank">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Tango Fox Mídia - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Iframe oculto para evitar redirecionamento -->
+    <iframe name="hidden_iframe" style="display: none;"></iframe>
+
+    <!-- Script atualizado -->
+    <script>
+        document.getElementById("formulario-newsletter").onsubmit = function() {
+            // Exibir o pop-up de confirmação
+            document.getElementById("popup").style.display = "flex";
+
+            // Esconder o pop-up automaticamente após 5 segundos
+            setTimeout(function() {
+                document.getElementById("popup").style.display = "none";
+            }, 5000);
+        };
+
+        function fecharPopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
