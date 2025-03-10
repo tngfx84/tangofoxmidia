@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Tango Fox Mídia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <a href="../index.html">
+                <img src="../img/logo-horizontal.png" alt="Tango Fox Mídia" class="logo">
+            </a>
+            <div class="menu-container">
+                <button id="menu-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li class="dropdown">
+                            <a href="#">Sobre ▾</a>
+                            <ul class="dropdown-content">
+                                <li><a href="sobre/quem-somos.html">Quem somos</a></li>
+                                <li><a href="sobre/em-construcao.html">Missão, visão e valores</a></li>
+                                <li><a href="sobre/em-construcao.html">Nossa equipe</a></li>
+                                <li><a href="sobre/em-construcao.html">Clientes e depoimentos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../em-construcao.html">Serviços</a></li>
+                        <li><a href="../em-construcao.html">Blog</a></li>
+                        <li><a href="../em-construcao.html">Portfólio</a></li>
+                        <li><a href="../em-construcao.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar...">
+                    <button><img src="../img/lupa.png" alt="Buscar"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Seção Hero - Quem Somos -->
+    <section class="hero-quem-somos">
+        <div class="container">
+            <h1>Transformamos criatividade e estratégia em resultados reais.</h1>
+            <h2>Criamos soluções digitais que unem design, marketing, dados e tecnologia para marcas que querem crescer.</h2>
+            <a href="https://wa.me/5511958655696" class="botao" target="_blank">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Seção 2 - História -->
+    <section class="secao-historia">
+        <div class="container">
+            <div class="historia-imagem">
+                <img src="../img/historia.jpg" alt="História da Tango Fox Mídia">
+            </div>
+            <div class="historia-texto">
+                <h2>Da Ideia à transformação digital</h2>
+                <p>
+                    A <strong>Tango Fox Mídia</strong> nasceu para preencher uma lacuna no mercado digital: <strong>muitas marcas tinham identidade visual sem estratégia, e estratégias digitais sem um design forte.</strong>
+                </p>
+                <p>
+                    Vimos a oportunidade de mudar isso. Criamos uma agência onde <strong>design, marketing, tecnologia e dados trabalham juntos para transformar negócios.</strong>
+                </p>
+                <p>
+                    Desde o início, nossa missão foi clara: <strong>entregar soluções completas para marcas que querem crescer no digital com criatividade e inteligência.</strong>
+                </p>
+                <p>
+                    Hoje, ajudamos empresas, empreendedores e startups a <strong>se posicionarem com autoridade, conquistarem novos clientes e escalarem seus negócios no digital.</strong>
+                </p>
+                <p>
+                    <strong>Criatividade + Estratégia + Tecnologia.</strong> Esse é o nosso DNA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Tango Fox Mídia - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.querySelector(".menu-container nav").classList.toggle("ativo");
+    });
+    </script>
+    
+    
+
+</body>
+</html>

@@ -105,6 +105,45 @@ nav ul li a:hover {
     height: 18px;
 }
 
+/* 🔹 Estilos do submenu dropdown */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li .dropdown-content li a {
+    color: #143068;
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+nav ul li .dropdown-content li a:hover {
+    color: #f54730;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* 🔹 Seção Principal (Hero) */
 .hero {
     background-color: #ebd37a;
@@ -362,7 +401,7 @@ nav ul li a:hover {
 .titulo-servicos {
     width: 100%;
     text-align: center;
-    margin-bottom: 30px; /* Espaço entre título e grid */
+    margin-bottom: 40px; /* Espaço entre título e grid */
 }
 
 .titulo-servicos h2 {
@@ -466,4 +505,285 @@ footer {
     background-color: #143068;
     color: white;
     text-align: center;
+}
+
+/* 🔹 Hero - Quem Somos */
+.hero-quem-somos {
+    background: url("../img/banner-quem-somos.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #143068;
+    padding: 20px;
+}
+
+/* 🔹 Container interno */
+.hero-quem-somos .container {
+    max-width: 800px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🔹 Título principal (H1) */
+.hero-quem-somos h1 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* 🔹 Subtítulo (H2) */
+.hero-quem-somos h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 15px;
+    max-width: 700px;
+}
+
+/* 🔹 Botão CTA */
+.hero-quem-somos .botao {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    background-color: #f54730;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.hero-quem-somos .botao:hover {
+    background-color: #d13a27;
+}
+
+/* 🔹 Seção História - Quem Somos */
+.secao-historia {
+    background-color: #e1e6ef;
+    padding: 80px 0;
+}
+
+.secao-historia .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* 🔹 Imagem da esquerda */
+.historia-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.historia-imagem img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+/* 🔹 Texto da direita */
+.historia-texto {
+    flex: 1;
+    background-color: #ebd37a;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 550px;
+}
+
+.historia-texto h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #143068;
+    margin-bottom: 15px;
+}
+
+.historia-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #143068;
+    margin-bottom: 10px;
+}
+
+/* Esconder menu normal no mobile */
+@media (max-width: 768px) {
+    .menu-container nav {
+        display: none;
+    }
+
+    /* Botão do menu hambúrguer */
+    #menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Menu hamburguer visível quando ativado */
+    .menu-container nav.ativo {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-container nav ul {
+        flex-direction: column;
+    }
+
+    .menu-container nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-container nav ul li a {
+        color: white;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+    }
+}
+/* 🔹 Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    
+    /* 🔹 Cabeçalho e Menu */
+    .menu-container nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    #menu-toggle {
+        display: block;
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #143068;
+    }
+
+    .menu-container nav.ativo {
+        display: flex;
+    }
+
+    .menu-container nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-container nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-container nav ul li a {
+        color: white;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+    }
+
+    /* 🔹 Hero - Quem Somos */
+    .hero-quem-somos {
+        height: auto;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero-quem-somos h1 {
+        font-size: 28px;
+    }
+
+    .hero-quem-somos h2 {
+        font-size: 18px;
+    }
+
+    .hero-quem-somos .botao {
+        width: 100%;
+    }
+
+    /* 🔹 Seção História */
+    .secao-historia .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .historia-imagem img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .historia-texto {
+        padding: 20px;
+    }
+
+    .historia-texto h2 {
+        font-size: 24px;
+    }
+
+    .historia-texto p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* 🔹 Seção Sobre */
+    .sobre .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* 🔹 Seção Serviços */
+    .servicos-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .servico-item {
+        width: 90%;
+        min-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* 🔹 Botões maiores */
+    .botao {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    /* 🔹 Rodapé */
+    footer {
+        font-size: 14px;
+    }
 }

@@ -14,14 +14,26 @@
     <!-- Cabeçalho -->
     <header>
         <div class="container">
-            <img src="img/logo-horizontal.png" alt="Tango Fox Mídia" class="logo">
+            <a href="index.html">
+                <img src="img/logo-horizontal.png" alt="Tango Fox Mídia" class="logo">
+            </a>
             <div class="menu-container">
+                <button id="menu-toggle">☰</button>
                 <nav>
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="em-construcao.html">Sobre</a></li>
+                        <li class="dropdown">
+                            <a href="#">Sobre ▾</a>
+                            <ul class="dropdown-content">
+                                <li><a href="sobre/quem-somos.html">Quem somos</a></li>
+                                <li><a href="sobre/em-construcao.html">Missão, visão e valores</a></li>
+                                <li><a href="sobre/em-construcao.html">Nossa equipe</a></li>
+                                <li><a href="sobre/em-construcao.html">Clientes e depoimentos</a></li>
+                            </ul>
+                        </li>
                         <li><a href="em-construcao.html">Serviços</a></li>
                         <li><a href="em-construcao.html">Blog</a></li>
+                        <li><a href="em-construcao.html">Portfólio</a></li>
                         <li><a href="em-construcao.html">Contato</a></li>
                     </ul>
                 </nav>
@@ -148,6 +160,11 @@
         function fecharPopup() {
             document.getElementById("popup").style.display = "none";
         }
+
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+    document.querySelector(".menu-container nav").classList.toggle("ativo");
+        });
+
     </script>
 
 </body>
